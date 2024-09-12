@@ -145,7 +145,7 @@
         height: 3px;
         margin: 5px auto;
         transition: all 0.3s ease-in-out;
-        background: #ffffff;
+        background: #ffaded;
     }
 
     .navbar__item {
@@ -195,6 +195,11 @@
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+}
+
+/* Hero section */
+.hero {
+    background: #ffffff43;
 }
 
 
