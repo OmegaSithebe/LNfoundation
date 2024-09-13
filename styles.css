@@ -88,7 +88,10 @@
     outline: none;
     border-radius: 4px;
     background: #fac677;
+    background: -webkit-linear-gradient(to right, #fcb045, #fac677, #fac677);
+    background: linear-gradient(to right, #fcb045, #fac677, #fac677);
     color: #686868;
+    transition: all 0.4s ease;
 }
 
 .button:hover {
@@ -199,10 +202,552 @@
 
 /* Hero section */
 .hero {
-    background: #ffffff43;
+    background: #ffffff;
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    padding: 200px 0;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero__heading {
+    font-size: 100px;
+    margin-bottom: 24px;
+    columns: #686868;
+    color: #757575;
+}
+
+.hero__heading span {
+    background: #fac677; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #ff6a00,
+      #fac677
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #ff6a00,
+      #fac677
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -mo-text-fill-color: transparent;
+}
+
+.hero__description {
+    font-size: 60px;
+    background: #B5B7BB; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #757575,
+      #B5B7BB
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #757575,
+      #B5B7BB
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -mo-text-fill-color: transparent;
+}
+
+.highlight {
+    border-bottom: 4px solid rgb(132, 0, 255);
+}
+
+@media screen and (max-width: 768px) {
+    .hero__heading {
+        font-size: 68px;
+    }
+
+    .hero__description {
+        font-size: 48px;
+    }
+}
+
+/* About Section */
+.main {
+    background-color: #ffffff;
+    padding: 18rem 0;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main__content {
+    color: #686868;
+    width: 100%;
+}
+
+.main__content h1 {
+    font-size: 2rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff8044 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.main__content p {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.main__btn {
+    font-size: 1.8rem;
+    background: #fac677;
+    background: -webkit-linear-gradient(to right, #fcb045, #fac677, #fac677);
+    background: linear-gradient(to right, #fcb045, #fac677, #fac677);
+    padding: 20px 60px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #686868;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.main__btn::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #f791d1;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.main__btn:hover {
+    color: #ffffff;
+}
+
+.main__btn:hover:after{
+    width: 100%;
+}
+
+.main__img--container {
+    text-align: center;
+}
+
+.main__imag--card {
+    margin: 10px;
+    height: 500px;
+    width: 500px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+}
+
+.fa-layer-group, 
+.fa-users {
+    font-size: 14rem;
+}
+
+#card-2 {
+    background: #fac677;
+    background: -webkit-linear-gradient(to right, #fcb045, #fac677, #fac677);
+    background: linear-gradient(to right, #fcb045, #fac677, #fac677);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 1100px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90%;
+    }
+
+    .main__img--container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main__imag--card {
+        height: 425px;
+        width: 425px;
+    }
+
+    .main__container {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main__content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h2 {
+        font-size: 3rem;
+    }
+
+    .main__content p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main__imag--card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .fa-users, .fa-layer-group {
+        font-size: 4rem;
+    } 
+
+    .main__content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .main__content h2 {
+        font-size: 2rem;
+    }
+
+    .main__content p {
+        margin-top: 2rem;
+    }
+
+    .main__btn {
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    }
+}
+
+/* Our Focus Area */
+
+.focus-area {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.focus-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.focus-item {
+    background-color: white;
+    border-radius: 8px;
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.focus-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.focus-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.focus-item p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.focus-item a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.focus-item a:hover {
+    text-decoration: underline;
 }
 
 
+/* Our Values */
 
+.values-section {
+    text-align: center;
+    padding: 50px 20px;
+}
 
+.values-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
 
+.values-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #34495e;
+}
+
+.values-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.value-card {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 300px;
+    margin: 15px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.value-card h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+.value-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px 0;
+    color: #7f8c8d;
+}
+
+.value-card .author {
+    font-style: italic;
+    color: #95a5a6;
+}
+
+.value-card .icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    opacity: 0.8;
+}
+
+.value-card.ubuntu {
+    background-image: url('desmond-tutu.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.value-card.integrity {
+    background-image: url('martin-luther-king.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.value-card.excellence {
+    background-image: url('wangari-maathai.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.value-card.passion {
+    background-image: url('maya-angelou.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.value-card.innovation {
+    background-image: url('nelson-mandela.jpg');
+    background-size: cover;
+    color: white;
+}
+
+/* FAQs */
+
+.faq-section {
+    padding: 20px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.faq-question {
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #f7f7f7;
+    position: relative;
+}
+
+.faq-question::after {
+    content: '\25BC';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    padding: 15px;
+    font-size: 16px;
+    display: none;
+    border-top: 1px solid #e0e0e0;
+    background-color: #ffffff;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Our Team Section */
+
+.team-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    position: relative;
+}
+
+.member-image {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.role {
+    font-size: 14px;
+    color: #888;
+    margin: 5px 0;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: #333;
+    margin: 0 5px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
