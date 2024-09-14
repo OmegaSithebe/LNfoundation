@@ -465,59 +465,72 @@
 /* Our Focus Area */
 
 .focus-area {
-    max-width: 1200px;
-    margin: 50px auto;
-    text-align: center;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-}
-
-.focus-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+.content {
+    width: 60%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .focus-item {
-    background-color: white;
-    border-radius: 8px;
-    width: 250px;
-    margin: 20px;
+    background: #f9f9f9;
     padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    border-radius: 8px;
+    text-align: left;
+    transition: box-shadow 0.3s ease;
+}
+
+.focus-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .focus-item img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
+    width: 40px;
+    margin-bottom: 10px;
 }
 
-.focus-item h2 {
-    font-size: 1.5rem;
+.focus-item h3 {
+    font-size: 1.3rem;
     margin-bottom: 10px;
-    color: #000;
 }
 
 .focus-item p {
     font-size: 0.9rem;
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 15px;
 }
 
-.focus-item a {
-    color: #f39c12;
-    text-decoration: none;
+.read-more {
+    color: #f16e00;
     font-weight: bold;
-    font-size: 0.9rem;
+    text-decoration: none;
 }
 
-.focus-item a:hover {
+.read-more:hover {
     text-decoration: underline;
+}
+
+.image-section {
+    width: 35%;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 
@@ -750,4 +763,149 @@ h1 {
 
 .social-links a:hover {
     color: #007bff;
+}
+
+/* Contact Us section */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.contact-info div {
+    flex: 1;
+    padding: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #ddd;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Container to keep everything in a single row */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Footer Text Links */
+.footer-links {
+    display: inline-block;
+}
+
+.footer-links a {
+    color: #f16e00;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons {
+    display: inline-block;
+}
+
+.social-icons a {
+    color: #d4b373;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+/* Subscribe Button */
+.subscribe-btn {
+    background-color: transparent;
+    border: 1px solid #f16e00;
+    color: #f16e00;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subscribe-btn:hover {
+    background-color: #f16e00;
+    color: #fff;
+}
+
+/* Bottom Section Styling */
+.footer-bottom {
+    background-color: #444;
+    padding: 15px 20px;
+    text-align: center;
+    color: #bbb;
+    font-size: 12px;
+}
+
+.footer-bottom a {
+    color: #f16e00;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
 }

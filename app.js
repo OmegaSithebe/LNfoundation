@@ -22,3 +22,37 @@ document.querySelectorAll('.faq-question').forEach(item => {
         });
     });
 });
+
+// Contact section
+function initMap() {
+    var location = { lat: -26.177618, lng: 28.058249 };
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: location
+    });
+
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map
+    });
+}
+
+// Submit form function (optional)
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert("Form submitted successfully!");
+});
+
+
+document.querySelectorAll('.read-more').forEach(item => {
+    item.addEventListener('click', event => {
+        event.preventDefault();
+        alert('Read more about this section');
+    });
+});
+
+
+// Footer
+document.querySelector('.subscribe-btn').addEventListener('click', function() {
+    alert('Subscribe button clicked!');
+});
